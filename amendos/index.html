@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AmendOS</title>
+<link rel="icon" href="logo.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+body{background:#fff;color:#0f172a;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:880px;margin:0 auto;padding:0 1.5rem}
+header{border-bottom:1px solid #e2e8f0;padding:.85rem 0}
+.nav{display:flex;justify-content:space-between;align-items:center}
+.brand{display:flex;align-items:center;gap:.6rem;font-weight:700;font-size:1.2rem}
+.brand img{height:32px;width:auto}
+.btn{background:#00a2ed;color:#fff;padding:.5rem 1.1rem;border-radius:6px;font-size:.9rem;font-weight:600;display:inline-block}
+.btn-alt{background:#f1f5f9;color:#0f172a;margin-left:.5rem}
+.hero{text-align:center;padding:3.5rem 0 3rem}
+.hero-logo{width:110px;height:auto;margin:0 auto 1.25rem;display:block}
+.badge{display:inline-block;background:#e0f2fe;color:#0284c7;font-size:.8rem;font-weight:600;padding:.2rem .75rem;border-radius:99px;margin-bottom:1rem}
+h1{font-size:2.5rem;line-height:1.15;margin-bottom:1rem;letter-spacing:-.03em}
+.sub{color:#64748b;max-width:540px;margin:0 auto 1.75rem;font-size:1.05rem}
+.preview{width:100%;max-width:800px;height:auto;border-radius:10px;border:1px solid #e2e8f0;margin:2.5rem auto 0;box-shadow:0 15px 30px -10px rgba(15,23,42,.15);display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;padding:3rem 0;border-top:1px solid #e2e8f0}
+.card{background:#f8fafc;border:1px solid #e2e8f0;padding:1.25rem;border-radius:8px}
+.card h3{font-size:1rem;margin-bottom:.3rem}
+.card p{color:#64748b;font-size:.88rem}
+.dl{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:1.75rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:3rem}
+.note{color:#d97706;font-size:.82rem;margin-top:.25rem}
+footer{border-top:1px solid #e2e8f0;padding:1.5rem 0;text-align:center;color:#64748b;font-size:.85rem}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a href="#" class="brand"><img src="logo.png" alt="AmendOS" width="537" height="560">AmendOS</a><a href="#dl" class="btn">Download <span class="ver">v0.1b</span></a></div></header>
+<main class="wrap">
+<section class="hero">
+<img src="logo.png" alt="AmendOS Logo" width="537" height="560" class="hero-logo">
+<span class="badge">Beta <span class="ver">v0.1b</span> • <span class="size">~15 MB</span></span>
+<h1>Compact and fast desktop OS.</h1>
+<p class="sub">Built in Assembler and C with the Limine bootloader. Full graphical workspace in a <span class="size">15 MB</span> footprint.</p>
+<a href="#dl" class="btn">Download ISO</a><a href="#info" class="btn btn-alt">Overview</a>
+<img src="desktop.png" alt="AmendOS Desktop" width="1024" height="768" class="preview">
+</section>
+<section id="info" class="grid">
+<div class="card"><h3>Assembler &amp; C</h3><p>Low-level architecture for instant response and minimal overhead.</p></div>
+<div class="card"><h3><span class="size">~15 MB</span> Size</h3><p>Complete operating system with GUI packed into <span class="size">~15 MB</span>.</p></div>
+<div class="card"><h3>Limine Bootloader</h3><p>Fast and reliable startup for BIOS and UEFI systems.</p></div>
+</section>
+<section id="dl" class="dl">
+<div><h2>Get AmendOS <span class="ver">v0.1b</span></h2><p class="note">Beta release — may contain bugs. Closed-source.</p></div>
+<a href="#" id="iso-link" class="btn">Download ISO (<span class="size">~15 MB</span>)</a>
+</section>
+</main>
+<footer><div class="wrap">&copy; 2026 AmendOS Project</div></footer>
+<script>
+const VERSION = "v0.1b";
+const SIZE = "~15 MB";
+const ISO_URL = "https://t.me/amendosproject";
+
+document.querySelectorAll(".ver").forEach(el => el.textContent = VERSION);
+document.querySelectorAll(".size").forEach(el => el.textContent = SIZE);
+document.getElementById("iso-link").href = ISO_URL;
+</script>
+</body>
+</html>
